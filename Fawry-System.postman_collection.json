@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "413c9de9-431d-4a1e-9c45-e5fd183de25a",
+		"name": "Fawry-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AccountController",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmed@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Account/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Account",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Ali ahmed\",\r\n    \"username\" : \"ali\",\r\n    \"email\" : \"ali@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Account/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Account",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckExistence",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"ahmed@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Account/CheckExistence",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Account",
+								"CheckExistence"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ServiceController",
+			"item": [
+				{
+					"name": "MobileServiceController",
+					"item": [
+						{
+							"name": "ProcessVodafoneMobileService",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\" : \"Vodafone\",\r\n    \"amount\" : 10.5,\r\n    \"mobileNum\" : \"01012345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Service/MobileService/ProcessService/Vodafone",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Service",
+										"MobileService",
+										"ProcessService",
+										"Vodafone"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InternetServiceController",
+					"item": [
+						{
+							"name": "ProcessWeInternetService",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\" : \"We\",\r\n    \"amount\" : 10.5,\r\n    \"serviceNum\" : \"0233516485\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Service/InternetService/ProcessService/We",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Service",
+										"InternetService",
+										"ProcessService",
+										"We"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AddToWalletController",
+					"item": [
+						{
+							"name": "ProcessAddToWalletService",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\" : 30,\r\n    \"type\" : \"AddToWallet\",\r\n    \"walletId\": 1,\r\n    \"creditCardId\" : 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/Service/AddToWalletService/ProcessService",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"Service",
+										"AddToWalletService",
+										"ProcessService"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "WalletController",
+			"item": [
+				{
+					"name": "GetWallet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1ODQwNDEsImV4cCI6MTY3MjU5MTI0MSwidXNlcklkIjoxfQ.bcpuKto-Z2UULfCCnuR98-2f4DFJ2N0RksdkowZ9ZjU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/Wallet/GetWallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Wallet",
+								"GetWallet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransactionController",
+			"item": [
+				{
+					"name": "CreateTransaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serviceId\" : 1,\r\n    \"paymentType\" : \"Wallet\",\r\n    \"paymentId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Transaction/CreateTransaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Transaction",
+								"CreateTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserTransactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1ODQwNDEsImV4cCI6MTY3MjU5MTI0MSwidXNlcklkIjoxfQ.bcpuKto-Z2UULfCCnuR98-2f4DFJ2N0RksdkowZ9ZjU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/Transaction/GetUserTransactions/:userId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Transaction",
+								"GetUserTransactions",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProceedTransaction",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/Transaction/ProceedTransaction/:transactionId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Transaction",
+								"ProceedTransaction",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransaction",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1ODQwNDEsImV4cCI6MTY3MjU5MTI0MSwidXNlcklkIjoxfQ.bcpuKto-Z2UULfCCnuR98-2f4DFJ2N0RksdkowZ9ZjU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/Transaction/GetTransaction/:transactionId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Transaction",
+								"GetTransaction",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RefundController",
+			"item": [
+				{
+					"name": "CreateTransactionRefund",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/Refund/CreateTransactionRefund/:transactionId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Refund",
+								"CreateTransactionRefund",
+								":transactionId"
+							],
+							"variable": [
+								{
+									"key": "transactionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRefund",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "ProcessRefund",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"status\" : \"Accepted\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Refund/ProcessRefund",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Refund",
+								"ProcessRefund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPendingRefunds",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1OTcwMTAsImV4cCI6MTY3MjYwNDIxMCwidXNlcklkIjoxfQ.eDI5hZUYhfBd7o0kLhnfomx58o2wPGH0Ep18Gg9qPkI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/Refund/GetPendingRefunds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Refund",
+								"GetPendingRefunds"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DiscountController",
+			"item": [
+				{
+					"name": "ApplyTransactionDiscount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzI1ODQwNDEsImV4cCI6MTY3MjU5MTI0MSwidXNlcklkIjoxfQ.bcpuKto-Z2UULfCCnuR98-2f4DFJ2N0RksdkowZ9ZjU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transactionId\" : 1,\r\n    \"discountId\" : 1,\r\n    \"type\" : \"Overral\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Discount/ApplyTransactionDiscount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Discount",
+								"ApplyTransactionDiscount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
